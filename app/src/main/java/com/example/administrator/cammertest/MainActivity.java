@@ -1,6 +1,14 @@
 package com.example.administrator.cammertest;
 
 import android.app.Activity;
+import android.widget.ImageView;
+
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,13 +17,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
 
 /**
  * 拍照demo
@@ -37,8 +41,6 @@ public class MainActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Log.d("====","");
 
         headIv = (ImageView) findViewById(R.id.image_layout);
         headIv.setOnClickListener(this);
